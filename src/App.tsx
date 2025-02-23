@@ -1,12 +1,17 @@
 import { useState } from 'react'
+import { UserDetailContext } from "./context/UserDetailContext";
+import "./index.css";
 import './App.css'
 
+
 function App() {
+  const [userDetail, setUserDetail] = useState<any>(null);
+
 
   return (
-    <div className="App">
-      
-    </div>
+    <UserDetailContext.Provider value={{userDetail, setUserDetail}}>
+     
+  </UserDetailContext.Provider>
   )
 }
 
