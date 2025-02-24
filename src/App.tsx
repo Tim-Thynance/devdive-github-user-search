@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { UserDetailContext } from "./context/UserDetailContext";
 import "./index.css";
 import './App.css'
+import Nav from './components/Nav';
+import SearchBar from './components/SearchBar';
 
 
 function App() {
@@ -10,7 +12,8 @@ function App() {
 
   return (
     <UserDetailContext.Provider value={{userDetail, setUserDetail}}>
-     
+     <Nav/>
+     <SearchBar/>
   </UserDetailContext.Provider>
   )
 }

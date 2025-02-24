@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+
+.btn {
+  border: none;
+  background: transparent;
+  color: var(--dk-white);
+}
+.light {
+  display: none;
+}
