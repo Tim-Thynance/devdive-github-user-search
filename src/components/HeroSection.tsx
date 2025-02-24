@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UserDetailContext } from "../context/UserDetailContext";
 import "./HeroSection.css";
 
-function Hero() {
+function HeroSection() {
   const { userDetail, setUserDetail } = useContext(UserDetailContext);
   return (
     <div className="section">
@@ -28,4 +28,4 @@ function Hero() {
     </div>
   );
 }
-export default Hero;
+export default HeroSection;

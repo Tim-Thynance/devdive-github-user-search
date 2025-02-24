@@ -4,7 +4,7 @@ import "./index.css";
 import './App.css'
 import Nav from './components/Nav';
 import SearchBar from './components/SearchBar';
-
+import HeroSection from './components/HeroSection';
 
 function App() {
   const [userDetail, setUserDetail] = useState<any>(null);
@@ -15,6 +15,7 @@ function App() {
       <div>
         <Nav />
         <SearchBar />
+        <HeroSection/>
       </div>
     </UserDetailContext.Provider>
   )
