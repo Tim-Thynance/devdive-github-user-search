@@ -1,0 +1,10 @@
+.stats{
+    /* margin: 3rem 0.12rem; */
+    display: flex;
+    max-width: 480px;
+    justify-content: space-around;
+    background: var(--light-gray);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    
+}

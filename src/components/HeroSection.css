@@ -34,3 +34,54 @@
   padding: 0.75rem;
   border-radius: 0.5rem;
 }
+/* ==========HERO========= */
+
+.hero{
+    /* height: 900px; */
+    margin: 1rem;
+    background: var(--lt-white);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.p-pic{
+    height: 117px;
+    width: 117px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.username{
+    color: var(--btn-blue-bg);
+}
+.p-details{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.info{
+    margin: 1.5rem 0;
+}
+.stats{
+    /* margin: 3rem 0.12rem; */
+    display: flex;
+    max-width: 480px;
+    justify-content: space-around;
+    background: var(--light-gray);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    
+}
+
+/* ==========Social Section========= */
+.socials div{
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 1rem;
+     max-width: 480px;
+}
+.g-link{
+    display: flex;
+
+}

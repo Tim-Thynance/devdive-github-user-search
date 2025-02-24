@@ -24,6 +24,7 @@ function HeroSection() {
           </div>
           <p className="info">{userDetail?.bio}</p>
         </div>
+        
       </div>
     </div>
   );
