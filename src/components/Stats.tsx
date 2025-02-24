@@ -1,6 +1,7 @@
 import { useContext } from "react";
-import "./FormsContainer.css";
+import "./Stats.css";
 import { UserDetailContext } from "../context/UserDetailContext";
+import './HeroSection.css'
 
 function Stats() {
   const { userDetail, setUserDetail } = useContext(UserDetailContext);

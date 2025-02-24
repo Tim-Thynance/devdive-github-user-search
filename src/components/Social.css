@@ -1,0 +1,9 @@
+.socials div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    max-width: 480px;
+}
+.g-link{
+   display: flex;
+}
