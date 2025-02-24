@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { UserDetailContext } from "../context/UserDetailContext";
+import dateFormat from "./DateFormat";
 import "./HeroSection.css";
 import Stats from "./Stats";
 import Social from "./Social";
@@ -20,7 +21,7 @@ function HeroSection() {
                     <div className="details">
                         <div className="p-details">
                             <h2>{userDetail?.name}</h2>
-                            <p>Joined 25 Jan 2020</p>
+                            <p>{dateFormat(userDetail?.created_at)}</p>
                         </div>
                         <div className="username">
                             <p>{userDetail?.login}</p>
