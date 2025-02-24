@@ -20,6 +20,8 @@
     --dk-white: #feffff;
     background: var(--cl-dk-bg);
     --lt-white: #1e2a47;
+    --cl-dark-blue: #feffff;
+
 }
   /* Typography */
   --font-primary: 'Space Mono', monospace;
@@ -64,18 +66,14 @@ body{
 }
 a{
   text-decoration: none;
-  color: inherit;
   cursor: pointer;
+  color: var(--cl-dark-blue);
 }
 button{
   cursor: pointer;
   
 }
-.icons{
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-}
+
 h1,h2,h3,h4,p{
   color:var(--dk-white);
 }
@@ -93,6 +91,9 @@ h3{
 h4{
   font-size: var(--font-h4);
 
+}
+P{
+  color: var(--cl-dark-blue);
 }
 
 .section{
