@@ -19,11 +19,14 @@ function Social(){
               </a>
             </div>
             <div className="g-link">
-            <img src={url} alt="github link" />
-              <a href="www.github.blog">{userDetail?.html_url}
-              </a>
               <div>
-                <img src={building} alt="building" /> @gitblog
+            <img src={url} alt="github link" /
+            >
+            <a href="{userDetail?.html_url}">{userDetail?.html_url}
+              </a>
+              </div>
+              <div>
+                <img src={building} alt="building" /> <p>@gitblog</p>
               </div>
             </div>
           </div>

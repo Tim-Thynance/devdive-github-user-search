@@ -8,15 +8,15 @@ function Stats() {
   return (
     <div className="stats">
       <div>
-        <h4>Repos</h4>
+        <p>Repos</p>
         <h2>{userDetail?.public_repos}</h2>
       </div>
       <div>
-        <h4>Following</h4>
+        <p>Following</p>
         <h2>{userDetail?.following}</h2>
       </div>
       <div>
-        <h4>Followers</h4>
+        <p>Followers</p>
         <h2>{userDetail?.followers}</h2>
       </div>
     </div>
