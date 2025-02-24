@@ -11,10 +11,12 @@ function App() {
 
 
   return (
-    <UserDetailContext.Provider value={{userDetail, setUserDetail}}>
-     <Nav/>
-     <SearchBar/>
-  </UserDetailContext.Provider>
+    <UserDetailContext.Provider value={{ userDetail, setUserDetail }}>
+      <div>
+        <Nav />
+        <SearchBar />
+      </div>
+    </UserDetailContext.Provider>
   )
 }
 

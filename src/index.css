@@ -1,5 +1,6 @@
-@import 'resets.css';
+/* @import 'resets.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Inika&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
   max-width: 1440px;
   /* Light Mode Colors */

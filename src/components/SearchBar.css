@@ -1,0 +1,44 @@
+@import url(../index.css);
+.search-container{
+    background: var(--lt-white);
+    margin: 1rem;
+    border-radius: 10px;
+    padding: 0.2rem 0.3rem;
+    box-shadow: var(--box-shadow);
+}
+.search-bar{
+    width:100%;
+    height: 80%;
+    background-color: transparent;
+    border: none;
+    font-size: var(--font-body);
+    font-family: var(--font-primary);
+}
+.search-bar::placeholder{
+    color: var(--dk-white);
+}
+
+.fa-search{
+    font-size: 1.5rem;
+    color: var(--btn-blue-bg);
+}
+
+.btn-search{
+    width: 106px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background: var(--btn-blue-bg);
+    color: white;
+    font-size: 1rem;
+}
+.btn-search:hover{
+    background: var(--btn-hover-bg);
+
+}
+form{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+}
