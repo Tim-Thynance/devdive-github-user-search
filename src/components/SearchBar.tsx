@@ -1,36 +1,22 @@
 import { useContext, useState } from "react";
 import "./SearchBar.css";
-import { GithubDataFetch } from "../lib/GitSearch";
-import { UserDetailContext } from "../context/UserDetailContext";
+import  GithubDataFetch  from "../lib/GitSearch"; // Function to fetch data
 
-function SearchBar() {
-    // console.log({GithubDataFetch})
-    const [username, setUsername] = useState<string>("");
-    const [user, setUser] = useState<any | null>(null);
-    const [error, setError] = useState<string>("");
-    const [loading, setLoading] = useState<boolean>(false);
-    const { userDetail, setUserDetail } = useContext(UserDetailContext);
-    const handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setLoading(true);
-        console.log({ username });
+interface SearchBarProps{
+    handleSearch: (e: React.FormEvent<HTMLFormElement>) => void;
+    setUsername: (e: string) => void;
+    username: string;
+    error: string;
+    loading: boolean;
+}
 
-        try {
-            const user = await GithubDataFetch(username);
-            setUserDetail(user);
-            setLoading(false);
-            setUsername("");
-        } catch (err: any) {
-            setLoading(false);
-        } finally {
-            setLoading(false);
-        }
-    };
+const SearchBar: React.FC<SearchBarProps> = ({ handleSearch, setUsername, username, loading }) => {
 
     return (
+        <>
         <div className="section">
             <div className="search-container">
-                <form action="" onSubmit={handleSearch}>
+                <form onSubmit={handleSearch}>
                     <i className="fa fa-search"></i>
                     <input
                         className="search-bar"
@@ -40,12 +26,14 @@ function SearchBar() {
                         onChange={(e) => setUsername(e.target.value)}
                     />
                     <button disabled={loading} type="submit" className="btn-search">
-                        {" "}
-                        {loading ? "Search..." : "Search"}
+                        {loading ? "Searching..." : "Search"}
                     </button>
                 </form>
             </div>
+
         </div>
+        </>
     );
 }
+
 export default SearchBar;
