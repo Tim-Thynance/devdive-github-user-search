@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: center;
   margin: 1rem 0rem;
+  h2{
+    padding-left: 1rem;
+  }
 }
 
 .btn {
@@ -12,4 +15,13 @@
 }
 .light {
   display: none;
+}
+.icons{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 0.25rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  color: var(--cl-dark-blue);
 }

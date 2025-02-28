@@ -22,8 +22,8 @@ function Nav() {
         setDarkmode(NewTheme);
         localStorage.setItem('theme', NewTheme ? 'dark' : 'light')
     };
-    const lightIcon = <img className="icon" src={sun} alt="sun-icon" />;
-    const darkIcon = <img className="icon" src={moon} alt="moon-icon" />;
+    const lightIcon =<i className="fas fa-sun"></i>
+    const darkIcon = <i className="fas fa-moon"></i>;
 
     
   return (
