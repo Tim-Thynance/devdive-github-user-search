@@ -10,7 +10,7 @@ interface SearchBarProps{
     loading: boolean;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ handleSearch, setUsername, username, loading }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ handleSearch, setUsername, username, loading,error }) => {
 
     return (
         <>
@@ -23,12 +23,18 @@ const SearchBar: React.FC<SearchBarProps> = ({ handleSearch, setUsername, userna
                         value={username}
                         type="text"
                         placeholder="Search Github Username..."
-                        onChange={(e) => setUsername(e.target.value)}
+                        onChange={(e) => setUsername(e.target.value)
+                            
+                        }
+                        
+
                     />
                     <button disabled={loading} type="submit" className="btn-search">
                         {loading ? "Searching..." : "Search"}
                     </button>
                 </form>
+                {error && <p className="error-message">{error}</p>}
+
             </div>
 
         </div>

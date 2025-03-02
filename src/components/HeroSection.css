@@ -57,14 +57,18 @@
     color: var(--cl-dark-blue);
     margin: 0.5rem 0.5rem;
  }
+ .socials{
+  padding-bottom: 1.2rem;
+ }
 
  .social-c{
     display: grid;
         grid-template-columns: repeat(2, 1fr);
      justify-content: space-between;
  }
-
-
+.user-link a:hover{
+  text-decoration: underline;
+}
 /* ==========for tablet============= */
   @media screen and (max-width:769px) {
     .section{

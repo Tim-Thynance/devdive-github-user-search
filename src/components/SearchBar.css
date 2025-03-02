@@ -5,6 +5,8 @@
     border-radius: 10px;
     padding: 0.2rem 0.3rem;
     box-shadow: var(--box-shadow);
+    position: relative;
+
 }
 .search-bar{
     width:100%;
@@ -13,9 +15,17 @@
     border: none;
     font-size: var(--font-body);
     font-family: var(--font-primary);
+    color: var(--dk-white);
+
+    
 }
 .search-bar::placeholder{
     color: var(--dk-white);
+}
+.search-bar:focus{
+    outline: none;
+    border: none;
+    color:var(--dk-white)
 }
 
 .fa-search{
@@ -41,4 +51,11 @@ form{
     grid-template-columns: auto 1fr auto;
     gap: 1rem;
     align-items: center;
+}
+.error-message{
+    color:var(--error-text);
+    position: absolute;
+    right: 7rem;
+    top: 30%;
+    font-size: 12px;
 }

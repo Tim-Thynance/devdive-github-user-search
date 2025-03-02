@@ -60,7 +60,7 @@ const HeroSection = ({ user }: UserCardProp) => {
 
                 <div className="socials">
                     <div className="social-c">
-                        <div className="username">
+                        <div className="user-link">
                             <p>
                                 <i className="fa-solid fa-location-dot"></i> {user?.location}
                             </p>
