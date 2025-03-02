@@ -1,9 +1,5 @@
-import { useContext } from "react";
 import dateFormat from "./DateFormat";
 import "./HeroSection.css";
-import Stats from "./Stats";
-import Social from "./Social";
-import GithubDataFetch from "../lib/GitSearch";
 
 interface User {
     avatar_url: string;
@@ -14,46 +10,83 @@ interface User {
     followers: number;
     following: number;
     created_at: string;
-
+    location: string | null;
+    twitter_username: string | null;
+    blog: string | null;
+    company: string | null;
+    html_url: string;
 }
 
 interface UserCardProp {
     user: User;
-    
+
 }
 
-const HeroSection = ( { user }:UserCardProp) =>{
+const HeroSection = ({ user }: UserCardProp) => {
 
     return (
-        <div className="section">
+        <header className="section header">
+            {/* <!-- ===HERO SECTION==== --> */}
             <div className="hero">
                 <div className="pic">
-                    <img
-                        src={user?.avatar_url}
-                        alt="avatar_url"
-                        className="p-pic"
-                    />
+                    <img src={user?.avatar_url} alt="avatar_url" className="p-pic" />
                 </div>
-                <div>
-                    <div className="details">
-                        <div className="p-details">
-                            <h2>{user.name}</h2>
-                            <p>{dateFormat(user?.created_at)}</p>
-                        </div>
-                        <div className="username">
-                            <p>{user?.login}</p>
-                        </div>
-                        <p className="info">{user?.bio}</p>
-                    </div>
-                    {/* ===stats section========== */}
-                    <div className="stat-container"><Stats user={user} /></div>
-                    <div className="social-container"><Social user={user} /></div>
-                </div>
-
             </div>
+            <div className="others">
+                <div className="details">
+                    <div className="p-details">
+                        <h2>{user?.name}</h2>
+                        <p>{user?.login}</p>
+                    </div>
+                    <p>joined {(dateFormat(user?.created_at))}</p>
+                </div>
+                <div className="bio">
+                    <p>{user?.bio}</p>
+                </div>
+                <div className="stats">
+                    <div>
+                        <p>Repos</p>
+                        <h2>{user?.public_repos}</h2>
+                    </div>
+                    <div>
+                        <p>Following</p>
+                        <h2>{user?.following}</h2>
+                    </div>
+                    <div>
+                        <p>Followers</p>
+                        <h2>{user?.followers}</h2>
+                    </div>
+                </div>
 
-        </div>
-    
+                <div className="socials">
+                    <div className="social-c">
+                        <div className="username">
+                            <p>
+                                <i className="fa-solid fa-location-dot"></i> {user?.location}
+                            </p>
+                            <div>
+                                <i className="fa-solid fa-link"></i>
+                                <a href="{user?.html_url}">{user?.login}
+                                </a>
+                            </div>
+                        </div>
+                        <div className="g-link">
+                        <a href="x.com">
+                                <i className="fa fa-twitter"></i> {user?.twitter_username}
+                            </a>
+                            <div>
+                                <i className="fa-solid fa-city"></i>
+                                <a href="">@gitblog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header >
+
+
+
     );
 }
+
 export default HeroSection;

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inika&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import './reset.css';
+@import './App.css';
+@import './components/HeroSection.css';
 
 :root {
   max-width: 1440px;
@@ -61,7 +63,6 @@ body{
   font-size: var(--font-body);
   background: var(--light-gray);
   font-weight: var(--font-weight);
-width: 100%;
 }
 a{
   text-decoration: none;
@@ -70,7 +71,6 @@ a{
 }
 button{
   cursor: pointer;
-  
 }
 
 h1,h2,h3,h4,p{

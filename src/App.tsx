@@ -2,19 +2,25 @@ import { useState } from "react";
 import "./index.css";
 import "./App.css";
 import Nav from "./components/Nav";
+import "./components/HeroSection.css";
 import SearchBar from "./components/SearchBar";
 import HeroSection from "./components/HeroSection";
 import GithubDataFetch from "./lib/GitSearch";
 
 interface UserData {
   avatar_url: string;
-  login: string;
-  name: string | null;
-  bio: string | null;
-  public_repos: number;
-  followers: number;
-  following: number;
-  created_at: string;
+    login: string;
+    name: string | null;
+    bio: string | null;
+    public_repos: number;
+    followers: number;
+    following: number;
+    created_at: string;
+    location: string | null;
+    twitter_username: string | null;
+    blog: string | null;
+    company: string | null;
+    html_url: string;
 }
 
 function App() {

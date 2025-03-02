@@ -1,7 +1,0 @@
-.socials div{
-    display: flex;
-    justify-content: space-between;
-    max-width: 480px;
-    align-items: center;
-    gap: 0.2rem;
-}
