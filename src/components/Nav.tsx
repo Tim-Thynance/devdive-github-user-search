@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import "../App.css";
-import moon from '../assets/moon.svg'
-import sun from '../assets/icons8-sun.svg'
 function Nav() {
     const [darkMode, setDarkmode] = useState<boolean>(()=>{
         return localStorage.getItem('theme')==='dark';

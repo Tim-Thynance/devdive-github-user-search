@@ -11,6 +11,10 @@
   background: transparent;
   color: var(--dk-white);
 }
+.btn:hover{
+  /* color: var(--cl-gray); */
+  color: blue;
+}
 .light {
   display: none;
 }
@@ -19,7 +23,9 @@
   justify-content:center;
   align-items: center;
   gap: 0.25rem;
-  /* padding-right: 1rem; */
   font-size: 1rem;
   color: var(--cl-dark-blue);
+}
+.icons:hover{
+  color: var(--cl-gray);
 }
