@@ -19,11 +19,9 @@ interface User {
 
 interface UserCardProp {
     user: User;
-
 }
 
 const HeroSection = ({ user }: UserCardProp) => {
-
     return (
         <header className="section header">
             {/* <!-- ===HERO SECTION==== --> */}
@@ -38,7 +36,7 @@ const HeroSection = ({ user }: UserCardProp) => {
                         <h2>{user?.name}</h2>
                         <p>{user?.login}</p>
                     </div>
-                    <p>joined {(dateFormat(user?.created_at))}</p>
+                    <p>joined {dateFormat(user?.created_at)}</p>
                 </div>
                 <div className="bio">
                     <p>{user?.bio}</p>
@@ -66,27 +64,23 @@ const HeroSection = ({ user }: UserCardProp) => {
                             </p>
                             <div>
                                 <i className="fa-solid fa-link"></i>
-                                <a href="{user?.html_url}">{user?.login}
-                                </a>
+                                <a href={`https://github.com/${user?.login}`} target="_blank" rel="noopener noreferrer">{user?.login}</a>
                             </div>
                         </div>
                         <div className="g-link">
-                        <a href="x.com">
+                            <a href={`https://x.com/${user?.twitter_username}`} target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-twitter"></i> {user?.twitter_username}
                             </a>
+
                             <div>
-                                <i className="fa-solid fa-city"></i>
-                                <a href="">@gitblog</a>
+                                <i className="fa-solid fa-city"></i><span >@gitblog</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header >
-
-
-
+        </header>
     );
-}
+};
 
 export default HeroSection;
