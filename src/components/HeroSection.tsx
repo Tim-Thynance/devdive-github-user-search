@@ -33,7 +33,7 @@ const HeroSection = ({ user }: UserCardProp) => {
             <div className="others">
                 <div className="details">
                     <div className="p-details">
-                        <h2>{user?.name}</h2>
+                        <h1>{user?.name}</h1>
                         <p>{user?.login}</p>
                     </div>
                     <p>joined {dateFormat(user?.created_at)}</p>

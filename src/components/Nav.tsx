@@ -26,7 +26,7 @@ function Nav() {
     
   return (
     <div className="nav section" id="nav">
-      <h2>devfinder</h2>
+      <h1>devfinder</h1>
       <button onClick={switchTheme} className="btn">
         <span className="icons">
         {darkMode ?  'LIGHT ': 'DARK ' }
